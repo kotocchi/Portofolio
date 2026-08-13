@@ -539,7 +539,7 @@ img, video { max-width: 100%; display: block; }
 
 @media (max-width: 720px) {
   .contact-cta {
-    padding-top: 210px;
+    padding-top: 260px;
   }
 }
 
