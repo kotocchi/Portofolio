@@ -482,6 +482,7 @@ img, video { max-width: 100%; display: block; }
   .services-grid { grid-template-columns: 1fr; }
 }
 
+
 /* ---------- about teaser ---------- */
 
 .about-teaser {
@@ -530,6 +531,9 @@ img, video { max-width: 100%; display: block; }
   .about-teaser {
     grid-template-columns: 1fr;
     align-items: start;
+  }
+  .about-teaser .eyebrow-line {
+    margin-bottom: 16px;
   }
 }
 
