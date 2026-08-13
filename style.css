@@ -485,15 +485,6 @@ img, video { max-width: 100%; display: block; }
 /* ---------- about teaser ---------- */
 
 .about-teaser {
-  padding: 110px 0;
-  border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.about-teaser {
   padding-top: 110px;
   padding-bottom: 110px;
   border-top: 1px solid var(--line);
@@ -501,6 +492,13 @@ img, video { max-width: 100%; display: block; }
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.about-teaser h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 54px);
+  text-transform: uppercase;
+  line-height: 1.05;
 }
 
 .about-teaser p {
@@ -533,6 +531,7 @@ img, video { max-width: 100%; display: block; }
     grid-template-columns: 1fr;
     align-items: start;
   }
+}
 
 /* ---------- contact cta ---------- */
 
