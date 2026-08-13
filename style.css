@@ -24,7 +24,7 @@
   --font-mono: 'IBM Plex Mono', monospace;
 
   /* layout */
-  --edge: clamp(20px, 5vw, 64px);
+  --edge: clamp(28px, 5vw, 64px);
   --max: 1400px;
 }
 
@@ -535,6 +535,12 @@ img, video { max-width: 100%; display: block; }
   padding: 130px 0 100px;
   border-top: 1px solid var(--line);
   text-align: center;
+}
+
+@media (max-width: 720px) {
+  .contact-cta {
+    padding-top: 210px;
+  }
 }
 
 .contact-cta h2 {
