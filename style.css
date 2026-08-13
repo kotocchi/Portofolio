@@ -539,7 +539,13 @@ img, video { max-width: 100%; display: block; }
 
 @media (max-width: 720px) {
   .contact-cta {
-    padding-top: 260px;
+    padding-top: 210px;
+  }
+  .contact-cta .eyebrow-line {
+    margin-bottom: 20px;
+  }
+  .contact-cta h2 {
+    margin-top: 8px;
   }
 }
 
