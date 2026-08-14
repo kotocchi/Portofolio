@@ -203,6 +203,10 @@ img, video { max-width: 100%; display: block; }
   position: relative;
 }
 
+.hero .timecode {
+  margin-bottom: 15px;
+}
+
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(48px, 9vw, 128px);
@@ -490,9 +494,8 @@ img, video { max-width: 100%; display: block; }
   padding-bottom: 110px;
   border-top: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .about-teaser h2 {
