@@ -50,12 +50,13 @@ document.querySelectorAll('.filmstrip').forEach((strip) => {
   strip.addEventListener('touchmove', (e) => move(e.touches[0].pageX), { passive: true });
 
   // Let mouse wheel vertical scroll translate to horizontal movement
-  strip.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      strip.scrollLeft += e.deltaY;
-      e.preventDefault();
-    }
-  }, { passive: false });
+strip.addEventListener('wheel', (e) => {
+  const canScrollMore = strip.scrollWidth > strip.clientWidth;
+  if (canScrollMore && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+    strip.scrollLeft += e.deltaY;
+    e.preventDefault();
+  }
+}, { passive: false });
 });
 
 // ===== Scroll reveal =====
@@ -86,7 +87,7 @@ modal.className = 'video-modal';
 modal.innerHTML = `
   <div class="video-modal-inner">
     <button class="video-modal-close" aria-label="Close video">✕</button>
-    <video muted loop playsinline controls></video>
+    <video loop playsinline controls></video>
   </div>
 `;
 document.body.appendChild(modal);
@@ -129,8 +130,18 @@ document.querySelectorAll('.reel-card').forEach((card) => {
   if (video.readyState >= 1) setThumbFrame();
   else video.addEventListener('loadedmetadata', setThumbFrame, { once: true });
 
+  // Hover preview (desktop only)
+  card.addEventListener('mouseenter', () => {
+    video.play();
+  });
+  card.addEventListener('mouseleave', () => {
+    video.pause();
+    setThumbFrame();
+  });
+
   card.addEventListener('click', (e) => {
     e.preventDefault();
-    openModal(video.currentSrc || video.src);
+    const src = video.dataset.src || video.currentSrc || video.src;
+    openModal(src);
   });
 });
