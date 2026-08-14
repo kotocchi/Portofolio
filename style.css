@@ -124,7 +124,7 @@ img, video { max-width: 100%; display: block; }
 
 .logo {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -134,9 +134,9 @@ img, video { max-width: 100%; display: block; }
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 40px;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 16x;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
